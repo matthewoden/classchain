@@ -1,11 +1,25 @@
 {
   "name": "classchain",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "A very simple tool to dynamically assign classnames.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Matthew Potter",
-  "license": "ISC"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matthewoden/classchain.git"
+  },
+  "keywords": [
+    "classnames",
+    "class",
+    "css",
+    "classlist"
+  ],
+  "bugs": {
+    "url": "https://github.com/matthewoden/classchain/issues"
+  },
+  "homepage": "https://github.com/matthewoden/classchain#readme"
 }
