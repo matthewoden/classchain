@@ -44,6 +44,28 @@ var Button = React.createClass({
 
 ```
 
+### Usage with Webpack/CSSModules
+
+```javascript
+
+var classchain = require('classchain');
+var styles = require('./styles.css');
+
+
+var Button = React.createClass({
+  // ...
+  render () {
+    var btnClass = classchain(styles.main)
+                  .use(styles.pressed, this.state.isPressed)
+                  .use(styles.over, !this.state.isPressed && this.state.isHovered)
+                  .list;
+    return <button className={btnClass}>{this.props.label}</button>;
+  }
+});
+
+```
+
+
 ## ...Doesn't the Classnames library already do this?
 It does! Normally, it does an exceptional job. But relying on the object literal format means it stumbles when classnames aren't hard-coded strings. Users have to either transpile object literals into something the classnames module can understand, or rely on it's alternate bind format.
 

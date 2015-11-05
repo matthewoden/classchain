@@ -1,6 +1,6 @@
 {
   "name": "classchain",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "A very simple tool to dynamically assign classnames.",
   "main": "index.js",
   "scripts": {

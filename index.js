@@ -7,7 +7,7 @@
 
     function classchain(list){
       if(!(this instanceof classchain)){
-        return new classChain(list);
+        return new classchain(list);
       }
       this.list = (list.constructor === String) ? list : '';
     }
