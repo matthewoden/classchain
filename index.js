@@ -4,20 +4,23 @@
 
 (function(){
     'use strict'
-
-    function classchain(list){
-      if(!(this instanceof classchain)){
-        return new classchain(list);
+    // arguments: Array([class, condition])
+    function classchain(){
+      return [].reduce.call(arguments, function(prev, current){
+          if(Array.isArray(current)){
+            if(current.length > 1){
+              return current[1] ? prev +' '+getString(current[0]) : prev;
+            } else {
+              return prev +' '+getString(current[0]);
+            }
+          }
+          return prev +' '+getString(current[0]);
+        }, '');
       }
-      this.list = (list.constructor === String) ? list : '';
+
+    function getString(item){
+      return typeof(item) === 'string'? item : item.toString ? item.toString() : '';
     }
-
-    classchain.prototype.use = function(classname, condition){
-      if(classname.constructor === String && condition){
-        this.list = this.list.concat(' ', classname);
-      }
-      return this;
-    };
 
     //export to multiple environments.
     if (typeof module !== 'undefined' && module.exports) {

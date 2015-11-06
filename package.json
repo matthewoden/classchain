@@ -1,7 +1,7 @@
 {
   "name": "classchain",
-  "version": "0.0.6",
-  "description": "A very simple tool to dynamically assign classnames.",
+  "version": "1.0.0",
+  "description": "A very simple tool to chain classnames together, based on application state.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
