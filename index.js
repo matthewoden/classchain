@@ -14,7 +14,7 @@
               return prev +' '+getString(current[0]);
             }
           }
-          return prev +' '+getString(current[0]);
+          return prev +' '+getString(current);
         }, '');
       }
 
